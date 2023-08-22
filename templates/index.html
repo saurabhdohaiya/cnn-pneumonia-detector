@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Pneumonia Detection using Chest scan</h2>
+<div class="container">
+    <div class="row">
+     
+<div class='form col'>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Upload a sample
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Get result</button>
+        </div>
+    </div>
+
+    <!-- <div class="loader" style="display:none;"></div> -->
+    <h3>
+        <span>Result:  </span>
+    </h3>
+</div>
+<div class="col">
+    <h3>
+        Why this model?
+    </h3>
+    <p>
+        Using deep learning(CNN). This model is able to predict the chest scan sample with over 92% of accuracy. So, we will be able to diagnose pneumonia disease more rapidly and treatment will be at fastest.
+    </p>
+</div>
+</div>
+
+{% endblock %}
